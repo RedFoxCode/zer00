@@ -1,5 +1,8 @@
 function getRandomFont() {
-	var element = files[Math.floor(Math.random() * files.length)];
+	var i = Math.floor(Math.random() * files.length);
+	var element = files[i];
+
+	files.splice(i, 1);
 
 	return element[1];
 }

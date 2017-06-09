@@ -2,6 +2,16 @@ var container1 = document.getElementById("container1");
 var container2 = document.getElementById("container2");
 
 function next() {
+	if (files.length === 0) {
+		swal({
+			title: "Out of fonts!",
+			text: "All unique fonts ended, refresh page if you want to play again",
+			type: "warning"
+		});
+
+		return;
+	}
+
 	var font = getRandomFont();
 	var element_zero = textToHTML("0", font);
 	var element_o = textToHTML("O", font);
