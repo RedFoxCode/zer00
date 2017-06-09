@@ -1,5 +1,9 @@
 var container1 = document.getElementById("container1");
 var container2 = document.getElementById("container2");
+var counter = document.getElementById("counter");
+
+var correct = 0;
+var wrong = 0;
 
 function next() {
 	if (files.length === 0) {
@@ -36,9 +40,15 @@ function clickHandler() {
 
 	if (this.getAttribute("data-z") === "0") {
 		swal("", "Correct!", "success");
+
+		correct++;
 	} else {
 		swal("", "Wrong!", "error");
+
+		wrong++;
 	}
+
+	counter.innerHTML = "Correct: " + correct + " / Wrong: " + wrong;
 
 	next();
 }
