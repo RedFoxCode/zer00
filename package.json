@@ -1,0 +1,23 @@
+{
+  "name": "zer00",
+  "version": "1.0.0",
+  "description": "A game about zeros",
+  "main": "buildFonts.js",
+  "dependencies": {},
+  "devDependencies": {
+    "opentype.js": "^0.7.2",
+    "async": "^2.4.0"
+  },
+  "scripts": {
+    "build-fonts": "node buildFonts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedFoxCode/zer00.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RedFoxCode/zer00/issues"
+  },
+  "homepage": "https://github.com/RedFoxCode/zer00#readme"
+}
