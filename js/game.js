@@ -60,4 +60,15 @@ swal({
 	confirmButtonText: "Got it!"
 });
 
+if (document.fonts) {
+	if (document.fonts.size !==files.length) {
+		swal({
+			title: "Failed to load fonts",
+			text: "Some or even all of fonts are corrupted or failed to load. This might happen on mobile devices or old browsers. Sorry about that"
+				+ "\n\nFailing fonts: " + (files.length - document.fonts.size),
+			type: "error"
+		});
+	}
+}
+
 next();
