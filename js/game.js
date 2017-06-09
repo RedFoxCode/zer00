@@ -48,4 +48,6 @@ swal({
 	text: "In this game you should click on zero",
 	type: "info",
 	confirmButtonText: "Got it!"
-}, next);
+});
+
+next();
