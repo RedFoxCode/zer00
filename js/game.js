@@ -8,8 +8,8 @@ var wrong = 0;
 function next() {
 	if (files.length === 0) {
 		swal({
-			title: "Out of fonts!",
-			text: "All unique fonts ended, refresh page if you want to play again",
+			title: lang.outOfFonts[0],
+			text: lang.outOfFonts[1],
 			type: "warning"
 		});
 
@@ -39,33 +39,32 @@ function clickHandler() {
 	console.log(JSON.stringify(this.getAttribute("data-z")));
 
 	if (this.getAttribute("data-z") === "0") {
-		swal("", "Correct!", "success");
+		swal("", lang.correct, "success");
 
 		correct++;
 	} else {
-		swal("", "Wrong!", "error");
+		swal("", lang.wrong, "error");
 
 		wrong++;
 	}
 
-	counter.innerHTML = "Correct: " + correct + " / Wrong: " + wrong;
+	counter.innerHTML = lang.score.replace("1", correct).replace("2", wrong);
 
 	next();
 }
 
 swal({
-	title: "Hello!",
-	text: "In this game you should click on zero",
+	title: lang.welcome[0],
+	text: lang.welcome[1],
 	type: "info",
-	confirmButtonText: "Got it!"
+	confirmButtonText: lang.welcome[2]
 });
 
 if (document.fonts) {
 	if (document.fonts.size !==files.length) {
 		swal({
-			title: "Failed to load fonts",
-			text: "Some or even all of fonts are corrupted or failed to load. This might happen on mobile devices or old browsers. Sorry about that"
-				+ "\n\nFailing fonts: " + (files.length - document.fonts.size),
+			title: lang.failedToLoad[0],
+			text: lang.failedToLoad[1].replace("1", files.length - document.fonts.size),
 			type: "error"
 		});
 	}
