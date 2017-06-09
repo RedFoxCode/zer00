@@ -48,7 +48,7 @@ function clickHandler() {
 		wrong++;
 	}
 
-	counter.innerHTML = lang.score.replace("1", correct).replace("2", wrong);
+	counter.innerHTML = lang.score.replace("%c", correct).replace("%w", wrong);
 
 	next();
 }
