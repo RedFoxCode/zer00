@@ -1,5 +1,7 @@
 # Zer00
 
+[Demo here](https://redfoxcode.github.io/zer00)
+
 Can you tell where is zero in random font?
 
 ![](/raw/1.gif)
