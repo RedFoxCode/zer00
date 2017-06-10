@@ -61,7 +61,7 @@ swal({
 });
 
 if (document.fonts) {
-	if (document.fonts.size !==files.length) {
+	if (document.fonts.size !== files.length) {
 		swal({
 			title: lang.failedToLoad[0],
 			text: lang.failedToLoad[1].replace("1", files.length - document.fonts.size),

@@ -13,6 +13,7 @@ fs.readdir("./fonts/", function(err, files) {
 
 	async.each(files, function(file, callback) {
 		if (String(file).indexOf(".") === -1) return callback();
+		if (String(file) === "README.md") return callback();
 
 		opentype.load("./fonts/" + file, function(err, font) {
 			console.log(file + " has name '" + font.names.fontFamily.en + "'");
